@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report Wizard - prototype</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="styles\style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+    $(function () {
+      $("#tabs").tabs();
+      $("#accordion").accordion();
+      $("input").checkboxradio();
+      $( "fieldset" ).controlgroup();
+    });
+  </script>
+    <script src="scripts\wizard.js"></script>
+</head>
+
+<body>
+
+  <div id="accordion" class="accordion">
+    <h3><b>Facility Criteria</b></h3>
+    <div>
+      <p>
+        here will be list
+      </p>
+    </div>
+      <div id="sr"><b>Department Criteria</b></div>
+    <div>
+      <p>
+        <div id="tabs">
+          <ul>
+            <li><a href="#tabs-1">Personal</a></li>
+            <li><a href="#tabs-2">Standard</a></li>
+            <li><a href="#tabs-3">Share</a></li>
+          </ul>
+          <div id="tabs-1">
+            <p>Proin elit arcu</p>
+          </div>
+          <div id="tabs-2">
+            <ul class="checkboxlist">
+              <li>
+                <label for="checkbox-1">First option to be selected</label>
+                <input type="checkbox" name="checkbox-1" id="checkbox-1" class="checkbox">
+              </li>
+              <li><label for="checkbox-2">choose me</label>
+                <input type="checkbox" name="checkbox-2" id="checkbox-2" class="checkbox"></li>
+              <li><label for="checkbox-3">Nice choise</label>
+                <input type="checkbox" name="checkbox-3" id="checkbox-3" class="checkbox"></li>
+              <li><label for="checkbox-4">dgsdsaq er</label>
+                <input type="checkbox" name="checkbox-4" id="checkbox-4" class="checkbox"></li>
+            </ul>
+          </div>
+          <div id="tabs-3">
+            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula
+              accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti
+              sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel
+              enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim,
+              pretium nec, feugiat nec, luctus a, lacus.</p>            
+          </div>
+        </div>
+      </p>
+    </div>
+    <h3><b>Report columns, column details</b></h3>
+    <div>
+      <p>
+        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+        ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+        lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+      </p>
+      <ul>
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+      </ul>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
