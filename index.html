@@ -14,11 +14,17 @@
     $(function () {
       $("#tabs").tabs();
       $("#accordion").accordion();
-      $("input").checkboxradio();
-      $( "fieldset" ).controlgroup();
+      $("input").checkboxradio({
+      icon: false
+    });
+      $("fieldset").controlgroup();
+      $("#timePeriod")
+      .selectmenu()
+      .selectmenu( "menuWidget" )
+              .addClass( "overflow" );
     });
   </script>
-    <script src="scripts\wizard.js"></script>
+  <script src="scripts\wizard.js"></script>
 </head>
 
 <body>
@@ -27,10 +33,70 @@
     <h3><b>Facility Criteria</b></h3>
     <div>
       <p>
-        here will be list
+        <fieldset>
+          <legend>Facility </legend>
+          <select name="facility" id="facility">
+            <option selected="selected">Select facility..</option>
+            <option>Adventisi Health Bakersfield - CA</option>
+            <option>Health Adventisi Bakersfield - BA</option>
+            <option>Bakersfield Health Adventisi - DA</option>
+            <option>Adventisi Bakersfield Health - EA</option>
+            <option>Health Bakersfield Adventisi - BA</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Data Type: </legend>
+          <label for="actual">Actual</label>
+          <input type="radio" name="dataType" id="actual">
+          <label for="normalized">Normalized</label>
+          <input type="radio" name="dataType" id="normalized">
+        </fieldset>
+        <fieldset>
+          <legend>Period: </legend>
+          <label for="quarterly">Quarterly</label>
+          <input type="radio" name="period" id="quarterly">
+          <label for="annual">Annual</label>
+          <input type="radio" name="period" id="annual">
+        </fieldset>
+        <fieldset>
+          <legend>Time period </legend>
+          <select name="timePeriod" id="timePeriod">
+            <option selected="selected">Select ...</option>
+            <option>1Q 2018</option>
+            <option>2Q 2018</option>
+            <option>3Q 2018</option>
+            <option>4Q 2018</option>
+            <option>Y 2018</option>
+            <option>1Q 2017</option>
+            <option>2Q 2017</option>
+            <option>3Q 2017</option>
+            <option>4Q 2017</option>
+            <option>Y 2017</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Trim point </legend>
+          <select name="trimPoint" id="trimPoint">
+            <option selected="selected">Select ...</option>
+            <option>1.5 IQR</option>
+            <option>2.5 IQR</option>
+            <option>3.5 IQR</option>
+            <option>4.5 IQR</option>
+
+          </select>
+        </fieldset>
+        <!-- <fieldset>
+          <legend>Data type: </legend>
+          <label for="dataType">New York</label>
+          <input type="radio" name="dataType" id="radio-1">
+          <label for="radio-2">Paris</label>
+          <input type="radio" name="dataType" id="radio-2">
+          <label for="radio-3">London</label>
+          <input type="radio" name="dataType" id="radio-3">
+        </fieldset> -->
       </p>
     </div>
-      <div id="sr"><b>Department Criteria</b></div>
+    <div id="sr"><b>Department Criteria</b></div>
     <div>
       <p>
         <div id="tabs">
@@ -61,7 +127,7 @@
               accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti
               sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel
               enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim,
-              pretium nec, feugiat nec, luctus a, lacus.</p>            
+              pretium nec, feugiat nec, luctus a, lacus.</p>
           </div>
         </div>
       </p>
