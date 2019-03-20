@@ -13,9 +13,9 @@
   <script>
     $(function () {
       // $("#tabs").tabs();\
-      $( "#tabs" ).tabs({
-      collapsible: true
-    });
+      $("#tabs").tabs({
+        collapsible: true
+      });
       $("#accordion").accordion({
         heightStyle: "fill"
       });
@@ -189,7 +189,134 @@
     <div><b>Department Criteria</b></div>
     <div>
       <p>
-          
+        <div onclick="tree_toggle(arguments[0])">
+          <ul class="Container">
+            <li class="Node IsRoot ExpandClosed">
+              <div class="Expand">Administration</div>
+              <div class="Content"></div>
+              <ul class="Container">
+                <li class="Node ExpandClosed">
+                  <div class="Expand">Administration</div>
+                  <div class="Content"> </div>
+                  <ul class="Container">
+                    <li class="Node ExpandLeaf IsLast">
+                      <div class="Expand">
+                        <input type="checkbox">
+                        Executive Offices 8311 & 9311 (U)</div>
+
+                      <div class="Content"></div>
+                    </li>
+                  </ul>
+                </li>
+                <!-- <li class="Node ExpandLeaf IsLast">
+                  <div class="Expand">Item 1.2</div>
+                  
+                  <div class="Content"></div>
+                </li> -->
+              </ul>
+            </li>
+            <li class="Node IsRoot ExpandClosed">
+              <div class="Expand">Ambulatory Care Clinics</div>
+              <div class="Content"></div>
+              <ul class="Container">
+                <li class="Node ExpandClosed">
+                  <div class="Expand">Ambulatory 1</div>
+                  <div class="Content"></div>
+                  <ul class="Container">
+                      <li class="Node ExpandLeaf IsLast">
+                        <div class="Expand">
+                          <input type="checkbox">
+                          Drivers 98821 & 9311 (USA)</div>
+  
+                        <div class="Content"></div>
+                      </li>
+                      <li class="Node ExpandLeaf IsLast">
+                          <div class="Expand">
+                            <input type="checkbox">
+                            Drivers 66673 & 234 (UK)</div>
+    
+                          <div class="Content"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Node ExpandClosed">
+                    <div class="Expand">Ambulatory 2</div>
+                    <div class="Content"></div>
+                    <ul class="Container">
+                        <li class="Node ExpandLeaf IsLast">
+                          <div class="Expand">
+                            <input type="checkbox">
+                            ambulat 1/2</div>
+    
+                          <div class="Content"></div>
+                        </li>
+                        <li class="Node ExpandLeaf IsLast">
+                            <div class="Expand">
+                              <input type="checkbox">
+                              ambulat 2/8</div>
+      
+                            <div class="Content"></div>
+                          </li>
+                        <li class="Node ExpandLeaf IsLast">
+                            <div class="Expand">
+                              <input type="checkbox">
+                              just to be 3rd</div>
+      
+                            <div class="Content"></div>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+            </li>
+
+
+
+            <li class="Node IsRoot ExpandClosed">
+              <div class="Expand">Dailysis Service</div>
+              <div class="Content"></div>
+              <ul class="Container">
+                  <li class="Node ExpandLeaf IsLast">
+                    <div class="Expand">
+                      <input type="checkbox">
+                      Dailysis Service 007</div>
+
+                    <div class="Content"></div>
+                  </li>
+                </ul>
+            </li>
+            <li class="Node IsRoot ExpandClosed">
+              <div class="Expand">Cardioloogy</div>
+              <div class="Content"></div>
+              <ul class="Container">
+                <li class="Node ExpandClosed">
+                  <div class="Expand">Vascular Services</div>
+                  <div class="Content"> </div>
+                  <ul class="Container">
+                    <li class="Node ExpandLeaf IsLast">
+                      <div class="Expand">
+                        <input type="checkbox">
+                        Series 8311 & 9311 (U)</div>
+
+                      <div class="Content"></div>
+                    </li>
+                    <li class="Node ExpandLeaf IsLast">
+                      <div class="Expand">
+                        <input type="checkbox">
+                        Series 911 & 10098 (U)</div>
+
+                      <div class="Content"></div>
+                    </li>
+                  </ul>
+                </li>
+                <!-- <li class="Node ExpandLeaf IsLast">
+                      <div class="Expand">Item 1.2</div>
+                      
+                      <div class="Content"></div>
+                    </li> -->
+              </ul>
+            </li>
+          </ul>
+        </div>
       </p>
     </div>
     <h3><b>Report columns, column details</b></h3>
