@@ -8,24 +8,13 @@
     border: solid 1px black;
     margin: 0px;
 }
-/* .ui-widget-content.ui-accordion-content-active{
-    height: auto;
-} */
-/* .ui-tabs.ui-corner-all.ui-widget.ui-widget-content{
-background-color: #e9e9e9;
-}
-.ui-tabs-nav.ui-corner-all.ui-helper-reset.ui-helper-clearfix.ui-widget-header{
-    background-color: white;
-} */
+
 .checkboxlist{
     list-style: none;
     padding: 1px 1px 1px 1px;
     margin: 1px 1px 1px 1px;
 }
-/* .selection_result{
-    margin: 0px;
-    float:left;
-} */
+
 .checkbox{
     width:75%;
 }
@@ -40,3 +29,4 @@ background-color: #e9e9e9;
   .tabname.active{
 background: blue;
   }
+
