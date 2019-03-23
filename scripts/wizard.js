@@ -1,7 +1,12 @@
-$(document).on('change', '.checkboxlist', function() {
-  debugger;
-  var a = $('input[name="depcret"]:checked');
+// $(document).on('change', '.checkboxlist', function() {
+//   debugger;
+//   var a = $('input[name="depcret"]:checked');
 
+// });
+$(document).on("change", ".rootchbx", function () {
+	var root = $(this).parent().parent();
+	var childer = $(root).find(".childchbx");
+	(this.checked) ? childer.prop('checked', true) : childer.prop('checked', false);
 });
 
 //Department Criteria tab
@@ -23,13 +28,13 @@ function tree_toggle(event) {
 	var newClass = hasClass(node, 'ExpandOpen') ? 'ExpandClosed' : 'ExpandOpen'
 	// заменить текущий класс на newClass
 	// регексп находит отдельно стоящий open|close и меняет на newClass
-	var re =  /(^|\s)(ExpandOpen|ExpandClosed)(\s|$)/
-	node.className = node.className.replace(re, '$1'+newClass+'$3')
+	var re = /(^|\s)(ExpandOpen|ExpandClosed)(\s|$)/
+	node.className = node.className.replace(re, '$1' + newClass + '$3')
 }
 
 
 function hasClass(elem, className) {
-	return new RegExp("(^|\\s)"+className+"(\\s|$)").test(elem.className)
+	return new RegExp("(^|\\s)" + className + "(\\s|$)").test(elem.className)
 }
 // end department criteria tab
 

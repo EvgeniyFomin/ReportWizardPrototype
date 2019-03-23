@@ -1,5 +1,6 @@
 .accordion{
-    width: 50%;
+    width: 60%;
+    height: auto;
 }
 .ui-accordion-header-active.ui-state-active,
 .ui-tabs-active.ui-state-active {
@@ -81,17 +82,20 @@ background: blue;
     /* width: 18px; */
     height: 18px;
     float: left;
-    background-image: url(img/loading.gif);
+    /* background-image: url(img/loading.gif); */
 }
 
 .Expand {
     /* width: 18px; */
     height: 18px;
     float: left;
+    
 }
 
 
 .ExpandOpen .Container {
+
+    padding-left: 25px;
         display: block;
 }
 
@@ -103,5 +107,15 @@ background: blue;
         cursor: pointer;
 }
 .ExpandLeaf .Expand {
+    margin-left: -25px;
         cursor: auto;
+}
+.rightColumn{
+    padding: 5px;       
+    float: right;
+}
+
+.leftColumn{
+    padding: 5px;
+    float: left;    
 }
